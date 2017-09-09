@@ -1,0 +1,45 @@
+.toolbar {
+	overflow: hidden;
+	color: white;
+}
+
+.toolbar .logo{
+	color:white;
+}
+
+.toolbar .avatar-wrapper {
+    height: 100%;
+}
+
+.toolbar .avatar-wrapper img {
+    height: 100%;
+    border-radius: 50%;
+}
+
+.toolbar .logo img {
+    height: 38px;
+}
+
+.toolbar md-toolbar {
+    fill: white;
+}
+
+.toolbar .username {
+    padding-left: 10px;
+    color: white;
+}
+
+.toolbar md-toolbar, .md-toolbar-tools{
+    min-height: 48px;
+    height: 48px !important;
+    width: auto;
+    background-color: #8BC34A;
+}
+
+.toolbar a{
+    margin: 0px;
+}
+
+.toolbar a span{
+    margin-left: 10px;
+}

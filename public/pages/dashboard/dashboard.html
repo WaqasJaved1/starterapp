@@ -1,0 +1,79 @@
+<md-content layout="column" style="height: 100%;width: 100%">
+    <div class="mh-16">
+        <!-- <div class="md-card-form-head mv-16"> -->
+            <!-- Dashboard -->
+        <!-- </div> -->
+        <md-card layout="column" class="p-16" >
+            <div class="md-card-form-head" style="border:none">
+                Pending Tasks
+            </div>
+            <div>
+                <div layout="row" layout-align="start center">
+                    <div>
+                        Today's Milk Report
+                    </div>
+                    <div>
+                        <md-button class="md-raised md-green-button">
+                            Add
+                        </md-button>
+                    </div>
+                </div>
+
+                <div layout="row" layout-align="start center">
+                    <div>
+                        Collect Rs 5000 from Waqas Javed
+                    </div>
+                    <div>
+                        <md-button class="md-raised md-green-button">
+                            Collected
+                        </md-button>
+                    </div>
+                </div>
+
+                <div layout="row" layout-align="start center">
+                    <div>
+                        Collect Rs 5000 from Mujtaba Haider
+                    </div>
+                    <div>
+                        <md-button class="md-raised md-green-button">
+                            Collected
+                        </md-button>
+                    </div>
+                </div>
+            </div>
+        </md-card>
+        <div layout-gt-xs="row" layout-xs="column">
+            <md-card class="card-style-1" flex-gt-xs layout-align="center center">
+                <div class="header-style-1">
+                    Today's Date
+                </div>
+                <div class="content-style-1">
+                    2 July 2017
+                </div>
+            </md-card>
+            <md-card class="card-style-2" flex-gt-xs layout-align="center center">
+                <div class="header-style-1" ui-sref="New Milk Report">
+                    Today's Milk Demand
+                </div>
+                <div class="content-style-1" layout="column">
+                    700 lts
+                </div>
+            </md-card>
+            <md-card class="card-style-3" flex-gt-xs layout-align="center center">
+                <div class="header-style-1">
+                    Today's Milk Purchase
+                    <ng-md-icon icon="add" class="icon-white hand" ui-sref="New Milk Buy">
+                    </ng-md-icon>
+                </div>
+                <div class="content-style-1">
+                    1000 lts
+                </div>
+            </md-card>
+        </div>
+        <md-card>
+                    <nvd3 options='options' data='data' api="api"></nvd3>
+        </md-card>
+
+        <div style="height: 10px;width: 100%"></div>
+    </div>
+</md-content>

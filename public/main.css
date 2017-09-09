@@ -1,0 +1,154 @@
+.white{
+	color: white;
+	fill:white;
+}
+
+.hand{
+	cursor: pointer;;
+}
+
+.mt-16{
+	margin-top: 16px;
+}
+
+.mh-16{
+	margin-left: 16px;
+	margin-right: 16px;
+}
+
+.mh-8{
+	margin-left: 8px;
+	margin-right: 8px;
+}
+
+.mv-16{
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+
+.mv-8{
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+
+.p-16{
+	padding: 16px;
+}
+
+.pl-16{
+	padding-left: 16px;
+}
+
+.pr-16{
+	padding-right: 16px;
+}
+
+.ph-16{
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+
+.pr-32{
+	padding-right: 2em;
+}
+
+.bg-white{
+	background-color: white;
+}
+
+.bg-white table{
+	background-color:white;
+}
+
+.md-green-button{
+	background-color: #689f38 !important;
+	fill:white;
+	color:white !important;
+}
+
+.icon-green{
+	fill:#689f38 !important;
+}
+
+.icon-blue{
+	fill:#039be5 !important;
+}
+.icon-white{
+	fill:white !important;
+}
+
+.blue{
+	color:#039be5;
+}
+
+.mdt-footer{
+	background-color: white !important;
+}
+
+.search-table-bar{
+	padding-right: 32px;padding-left: 32px;
+	padding-top: 16px;
+	background-color: #ECECEA;
+	margin-bottom: 16px;
+}
+
+md-input-container{
+	margin-bottom: 0px
+}
+
+.md-card-form-head{
+	border-bottom: 1px solid #039be5;
+	margin-bottom: 8px;
+	color:#039be5;
+	padding-bottom: 8px;
+}
+
+.weekly-schedule md-input-container{
+	max-width: 90px;
+	/*padding: 0px*/
+}
+
+.selectsearchfix .md-select-value span{
+	display: none;
+}
+
+.selectsearchfix .md-select-value::after{
+	content: "Select Group";
+}
+
+.inline{
+	display: inline-block !important;
+}
+
+
+
+.card-style-1{
+	color: white;
+	background-color:#30a6ff;
+	min-width: 300px;
+}
+
+.card-style-2{
+	color: white;
+	background-color:#feb63e;
+	min-width: 300px;
+}
+
+.card-style-3{
+	color: white;
+	background-color:#1dc0af;
+	min-width: 300px;
+}
+.card-style-3 ng-md-icon{
+	float: right;
+}
+.header-style-1{
+	padding: 16px;
+	width: 100%;
+}
+
+.content-style-1{
+	height: 80px;
+	font-size: 50px
+}

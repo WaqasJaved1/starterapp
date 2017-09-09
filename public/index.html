@@ -1,0 +1,309 @@
+<head>
+    <title>Milkhaas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <style type="text/css">
+    [ng\:cloak],
+    [ng-cloak],
+    [data-ng-cloak],
+    [x-ng-cloak],
+    .ng-cloak,
+    .x-ng-cloak {
+        display: none !important;
+    }
+    </style>
+    <!-- Angular Material style sheet -->
+</head>
+
+<body ng-app="milkhaas" ng-controller="main">
+    <style type="text/css">
+    splash-screen {
+        background-color: blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        position: fixed;
+        z-index: 10000;
+        background-color: #fff;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 1;
+        transition: opacity 0.9s ease-in-out;
+    }
+    
+    splash-screen._splash_fade_out {
+        opacity: 0;
+    }
+    
+    splash-screen .logo {
+        width: 80%;
+        max-width: 200px;
+    }
+    
+    #splash-screen {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: white;
+        z-index: 99999;
+    }
+    
+    #splash-screen.ng-leave {
+        opacity: 1;
+        transition: all linear 200ms;
+    }
+    
+    #splash-screen.ng-leave-active {
+        opacity: 0;
+    }
+    
+    #splash-screen .center {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    #splash-screen .logo {
+        /*width: 96px;*/
+        /*height: 96px;*/
+        line-height: 96px;
+        margin: 0 auto;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        text-align: center;
+        border-radius: 2px;
+        background-color: #689f38;
+        color: #FFFFFF;
+        box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.22);
+    }
+    
+    #splash-screen .spinner-wrapper {
+        display: block;
+        position: relative;
+        width: 100%;
+        min-height: 100px;
+        height: 100px;
+    }
+    
+    #splash-screen .spinner-wrapper .spinner {
+        position: absolute;
+        overflow: hidden;
+        left: 50%;
+        margin-left: -50px;
+        animation: outer-rotate 2.91667s linear infinite;
+    }
+    
+    #splash-screen .spinner-wrapper .spinner .inner {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        animation: sporadic-rotate 5.25s cubic-bezier(0.35, 0, 0.25, 1) infinite;
+    }
+    
+    #splash-screen .spinner-wrapper .spinner .inner .gap {
+        position: absolute;
+        left: 49px;
+        right: 49px;
+        top: 0;
+        bottom: 0;
+        border-top: 10px solid;
+        box-sizing: border-box;
+    }
+    
+    #splash-screen .spinner-wrapper .spinner .inner .left,
+    #splash-screen .spinner-wrapper .spinner .inner .right {
+        position: absolute;
+        top: 0;
+        height: 100px;
+        width: 50px;
+        overflow: hidden;
+    }
+    
+    #splash-screen .spinner-wrapper .spinner .inner .left .half-circle,
+    #splash-screen .spinner-wrapper .spinner .inner .right .half-circle {
+        position: absolute;
+        top: 0;
+        width: 100px;
+        height: 100px;
+        box-sizing: border-box;
+        border: 10px solid #689f38;
+        border-bottom-color: transparent;
+        border-radius: 50%;
+    }
+    
+    #splash-screen .spinner-wrapper .spinner .inner .left {
+        left: 0;
+    }
+    
+    #splash-screen .spinner-wrapper .spinner .inner .left .half-circle {
+        left: 0;
+        border-right-color: transparent;
+        animation: left-wobble 1.3125s cubic-bezier(0.35, 0, 0.25, 1) infinite;
+        -webkit-animation: left-wobble 1.3125s cubic-bezier(0.35, 0, 0.25, 1) infinite;
+    }
+    
+    #splash-screen .spinner-wrapper .spinner .inner .right {
+        right: 0;
+    }
+    
+    #splash-screen .spinner-wrapper .spinner .inner .right .half-circle {
+        right: 0;
+        border-left-color: transparent;
+        animation: right-wobble 1.3125s cubic-bezier(0.35, 0, 0.25, 1) infinite;
+        -webkit-animation: right-wobble 1.3125s cubic-bezier(0.35, 0, 0.25, 1) infinite;
+    }
+    
+    @keyframes outer-rotate {
+        0% {
+            transform: rotate(0deg) scale(0.5);
+        }
+        100% {
+            transform: rotate(360deg) scale(0.5);
+        }
+    }
+    
+    @keyframes left-wobble {
+        0%,
+        100% {
+            transform: rotate(130deg);
+        }
+        50% {
+            transform: rotate(-5deg);
+        }
+    }
+    
+    @keyframes right-wobble {
+        0%,
+        100% {
+            transform: rotate(-130deg);
+        }
+        50% {
+            transform: rotate(5deg);
+        }
+    }
+    
+    @keyframes sporadic-rotate {
+        12.5% {
+            transform: rotate(135deg);
+        }
+        25% {
+            transform: rotate(270deg);
+        }
+        37.5% {
+            transform: rotate(405deg);
+        }
+        50% {
+            transform: rotate(540deg);
+        }
+        62.5% {
+            transform: rotate(675deg);
+        }
+        75% {
+            transform: rotate(810deg);
+        }
+        87.5% {
+            transform: rotate(945deg);
+        }
+        100% {
+            transform: rotate(1080deg);
+        }
+    }
+    </style>
+    <splash-screen id="splash-screen">
+        <div class="center">
+            <div class="logo">
+                <span>Milkhaas</span>
+            </div>
+            <!-- Material Design Spinner -->
+            <div class="spinner-wrapper">
+                <div class="spinner">
+                    <div class="inner">
+                        <div class="gap"></div>
+                        <div class="left">
+                            <div class="half-circle"></div>
+                        </div>
+                        <div class="right">
+                            <div class="half-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- / Material Design Spinner -->
+        </div>
+    </splash-screen>
+
+
+    <ng-include src="'/includes/toolbar.html'" ng-cloak></ng-include>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../libraries/angular_material/angular-material.min.css">
+    <link rel="stylesheet" type="text/css" href="toolbar.css">
+    <link rel="stylesheet" type="text/css" href="sidebar.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <!--<link rel="stylesheet" type="text/css" href="pages/sign_in/sign_in.css">-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js">
+    </script>
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="../libraries/angular_material/angular.min.js"></script>
+    <script src="../libraries/angular_material/angular-animate.min.js"></script>
+    <script src="../libraries/angular_material/angular-aria.min.js"></script>
+    <script src="../libraries/angular_material/angular-messages.min.js"></script>
+    <script src="../libraries/angular-sanitize/angular-sanitize.js"></script>
+    <!-- Angular Material Library -->
+    <script src="../libraries/angular_material/angular-material.min.js"></script>
+    <script src="../libraries/angular_material/angular-ui-router.min.js"></script>
+    <script src="../libraries/angular-material-icons/angular-material-icons.min.js"></script>
+
+    <!-- Mask Input -->
+    <script type="text/javascript" src="../libraries/input-mask/mask.min.js"></script>
+
+    <!-- datatable -->
+    <script src="../libraries/mddatatable/md-data-table-templates.js"></script>
+    <script src="../libraries/mddatatable/md-data-table.js"></script>
+    <link rel="stylesheet" type="text/css" href="../libraries/mddatatable/md-data-table-style.css">
+
+    <!-- Charts -->
+    <script src="../libraries/nvd3chart/d3.min.js" ng-cloak></script>
+    <script src="../libraries/nvd3chart/nv.d3.min.js" ng-cloak></script>
+    <script src="../libraries/nvd3chart/angular-nvd3.min.js" ng-cloak></script>
+    <link rel="stylesheet" href="../libraries/nvd3chart/nv.d3.css" ng-cloak>
+
+    <!-- Application -->
+    <script type="text/javascript" ng-cloak>
+    angular.module('milkhaas', ['ngMaterial', 'ui.router', 'ngSanitize', 'ngAnimate', 'ngMdIcons','mdDataTable','ui.mask','nvd3']);
+    </script>
+    <!-- Theming -->
+    <script type="text/javascript" src="index.theming.js"></script>
+
+
+
+    <!-- Services -->
+    
+    <!-- Controllers -->
+    <script type="text/javascript" src="index.controller.js"></script>
+    <script type="text/javascript" src="pages/dashboard/dashboard.controller.js"></script>
+    
+    <!-- Add new Controller -->
+    
+    <!-- Profile Controller -->
+    
+    <!-- Route -->
+
+    <script type="text/javascript" src="index.route.js"></script>
+    
+    <!-- Filters & Directives -->
+    <script type="text/javascript" src="directives_filters/filters.js"></script>
+    <script type="text/javascript" src="directives_filters/directives.js"></script>
+    <!-- base -->
+    <base href="/">
+</body>
+
+</html>

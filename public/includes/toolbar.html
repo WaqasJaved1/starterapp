@@ -1,0 +1,121 @@
+<div class="toolbar">
+    <md-content style="overflow: hidden;" >
+        <md-toolbar class="md-primary " layout="row">
+            <div class="md-toolbar-tools" style="background-color: #689f38; box-shadow: 0 2px 5px rgba(0,0,0,.26);">
+                <md-button class="md-icon-button" aria-label="Settings" ng-click="toggle('sidenav')" disable-gt-md>
+                    <ng-md-icon icon="menu"></ng-md-icon>
+                </md-button>
+                <div class="logo hand" layout="row" ui-sref="Dashboard">
+                    Milkhass
+                </div>
+            </div>
+            <div flex="100" layout="row">
+                
+            </div>
+            <div layout="column" layout-align="center center">
+                <md-menu-bar id="user-menu">
+                    <md-menu md-position-mode="left bottom">
+                        <md-button class="user-button" ng-click="$mdOpenMenu()" aria-label="User settings" translate translate-attr-aria-label="TOOLBAR.USER_SETTINGS">
+                            <div layout="row" layout-align="center center">
+                                <div class="avatar-wrapper">
+                                    <img md-menu-align-target class="avatar" src="/admin/assets/images/avatar.jpg">
+                                </div>
+                                <span class="username" hide-xs>Super Admin</span>
+                                <ng-md-icon icon="expand_more" class="icon s16" hide-sm></ng-md-icon>
+                            </div>
+                        </md-button>
+                        <md-menu-content width="3" class="sub_menu">
+                            <md-menu-item class="md-indent">
+                                <md-button aria-label="My Profile" ng-click="changeurl('/admin/AdminProfile'+user.user._id)">
+                                    <ng-md-icon icon="person"></ng-md-icon>
+                                    My Profile</md-button>
+                            </md-menu-item>
+                            <md-menu-item class="md-indent">
+                                <md-button aria-label="Change Pass" ng-click="changePassword($event)" >
+                                    <ng-md-icon icon="edit"></ng-md-icon>
+                                    Change Password</md-button>
+                            </md-menu-item>
+                            <md-menu-item class="md-indent" ng-if="user.user.uType == 'super'">
+                                <md-button aria-label="Settings" ng-click="change('Settings')" >
+                                    <ng-md-icon icon="settings"></ng-md-icon>
+                                    Settings</md-button>
+                            </md-menu-item>
+                            <md-menu-divider></md-menu-divider>
+                            <md-menu-item class="md-indent">
+                                <md-button aria-label="logout" ng-click="logout()">
+                                    <ng-md-icon icon="logout"></ng-md-icon>Logout
+                                </md-button>
+                            </md-menu-item>
+                        </md-menu-content>
+                    </md-menu>
+                </md-menu-bar>
+            </div>
+        </md-toolbar>
+    </md-content>
+    <section layout="row" flex>
+        <div layout="column" class="sidebar">
+            <md-sidenav flex="100" class="md-sidenav-left" md-component-id="sidenav" md-whiteframe="4">
+                <md-toolbar class="md-theme-indigo top-bar" class="top-bar" layout="row" layout-align="top center">
+                    <h1 class="md-toolbar-tools white">Milkhaas</h1>
+                    <ng-md-icon icon="close" class="close" ng-click="toggle('sidenav')"></ng-md-icon>
+                </md-toolbar>
+                <md-content layout-padding layout="column">
+                    <md-button aria-label="Customers" layout="row" name="Customers" ui-sref="Customers">
+                        <ng-md-icon icon="dashboard"></ng-md-icon>
+                        Customers
+                    </md-button>
+                    <md-button aria-label="Change Order" layout="row" name="Change Order" ui-sref="Change Order">
+                        <ng-md-icon icon="dashboard"></ng-md-icon>
+                        Order Change Requests
+                    </md-button>
+                    <md-button aria-label="Users" layout="row" name="Users" ui-sref="Users">
+                        <ng-md-icon icon="dashboard"></ng-md-icon>
+                        Users
+                    </md-button>
+                    <md-button aria-label="Farms" layout="row" name="Farms" ui-sref="Farms">
+                        <ng-md-icon icon="dashboard"></ng-md-icon>
+                        Farms
+                    </md-button>
+                    <md-button aria-label="Milk Buy" layout="row" name="Milk Buy" ui-sref="Milk Buy">
+                        <ng-md-icon icon="dashboard"></ng-md-icon>
+                        Milk Purchase
+                    </md-button>
+
+                    <md-button aria-label="Riders Schedule" layout="row" name="Riders Schedule" ui-sref="Riders Schedule">
+                        <ng-md-icon icon="dashboard"></ng-md-icon>
+                        Riders Schedule
+                    </md-button>
+                    <md-button aria-label="Price History" layout="row" name="Price History" ui-sref="Price History">
+                        <ng-md-icon icon="dashboard"></ng-md-icon>
+                        Price History
+                    </md-button>
+                    <md-button aria-label="Quality Reports" layout="row" name="Quality Reports" ui-sref="Quality Reports">
+                        <ng-md-icon icon="dashboard"></ng-md-icon>
+                        Quality Reports
+                    </md-button>
+                    <md-button aria-label="Groups" layout="row" name="Groups" ui-sref="Groups">
+                        <ng-md-icon icon="dashboard"></ng-md-icon>
+                        Groups
+                    </md-button>
+                    <md-button aria-label="Message" layout="row" name="Message" ui-sref="Message">
+                        <ng-md-icon icon="dashboard"></ng-md-icon>
+                        Message
+                    </md-button>
+                    <md-button aria-label="Discount" layout="row" name="Discount" ui-sref="Discount">
+                        <ng-md-icon icon="dashboard"></ng-md-icon>
+                        Discount
+                    </md-button>
+                    <md-button aria-label="Expense" layout="row" name="Expense" ui-sref="Expense">
+                        <ng-md-icon icon="dashboard"></ng-md-icon>
+                        Expense
+                    </md-button>
+                    <md-button aria-label="Feedback" layout="row" name="Feedback" ui-sref="Feedback">
+                        <ng-md-icon icon="dashboard"></ng-md-icon>
+                        Feedbacks
+                    </md-button>
+                </md-content>
+            </md-sidenav>
+        </div>
+        <div ui-view flex class="pageArea" style="width: 100%;height: 90%;"></div>
+    </section>
+</div>
